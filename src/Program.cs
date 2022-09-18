@@ -4,31 +4,33 @@ using VirtualDars.DesignPatterns.Builder;
 using static System.Console;
 
 // an'anaviy builder
-var coffeeDirector = new CoffeeDirector();
+var teaDirector = new TeaDirector();
 
-var cappucinoBuilder = new CappucinoBuilder();
-var coffee = coffeeDirector.MakeCoffee(cappucinoBuilder);
-WriteLine(coffee.Show());
+var lemonTeaBuilder = new LemonTeaBuilder();
+var tea1 = teaDirector.MakeTea(lemonTeaBuilder);
+WriteLine(tea1.Show());
 WriteLine();
 
-var mochaBuilder = new MochaBuilder();
-var coffee2 = coffeeDirector.MakeCoffee(mochaBuilder);
-WriteLine(coffee2.Show());
+var greenTeaBuilder = new GreenTeaBuilder();
+var tea2 = teaDirector.MakeTea(greenTeaBuilder);
+WriteLine(tea2.Show());
 WriteLine();
 
 
 // fluent builder
-var fluentCoffeeDirector = new FluentCoffeeDirector();
+var fluentTeaDirector = new FluentTeaDirector();
 
-var fluentCappBuilder = new FluentCappucinoBuilder();
-var coffee3 = fluentCoffeeDirector.MakeCoffee(fluentCappBuilder);
-WriteLine(coffee3.Show());
+var fluentCappBuilder = new FluentLemonTeaBuilder();
+var tea3 = fluentTeaDirector.MakeTea(fluentCappBuilder);
+WriteLine(tea3.Show());
 WriteLine();
 
-var fluentMochaBuilder = new FluentMochaBuilder();
-var coffee4 = fluentCoffeeDirector.MakeCoffee(fluentMochaBuilder);
-WriteLine(coffee4.Show());
+var fluentBlackTeaBuilder = new FluentBlackTeaBuilder();
+var tea4 = fluentTeaDirector.MakeTea(fluentBlackTeaBuilder);
+WriteLine(tea4.Show());
 WriteLine();
+
+
 
 // Builder patterniga .Net dan misolllar: StringBuilder va SqlConnectionStringBuilder
 var sb = new StringBuilder();

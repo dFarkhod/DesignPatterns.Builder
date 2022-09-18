@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace VirtualDars.DesignPatterns.Builder
 {
-    public interface ICoffeeBuilder
+    public interface ITeaBuilder
     {
-        void CreateCoffee();
-        void SetCoffeeType();
+        void CreateTea();
+        void SetTeaType();
         void SetWater();
         void SetMilk();
         void SetSugar();
-        void SetChocolate();
-        void SetEspresso();
-        Coffee GetCoffee();
+        void SetLemon();
+        void SetIce();
+        Tea GetTea();
     }
 }
